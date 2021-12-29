@@ -7,11 +7,19 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
 cmake_minimum_required(VERSION 3.8)
+
+add_executable(server src/add_two_ints_server.cpp)
+
+
+install(TARGETS
+  server
+  DESTINATION lib/${PROJECT_NAME})
 
 
 if(BUILD_TESTING)
