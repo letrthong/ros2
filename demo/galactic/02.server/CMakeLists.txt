@@ -17,8 +17,7 @@ find_package(rclcpp REQUIRED)
 cmake_minimum_required(VERSION 3.8)
 
 add_executable(server src/add_two_ints_server.cpp)
-
-
+ 
 install(TARGETS
   server
   DESTINATION lib/${PROJECT_NAME})
