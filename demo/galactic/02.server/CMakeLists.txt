@@ -17,7 +17,7 @@ cmake_minimum_required(VERSION 3.8)
 
 add_executable(server.out src/add_two_ints_server.cpp)
 
-ament_target_dependencies(server.out rclcpp) 
+ament_target_dependencies(server.out rclcpp std_msgs) 
 
 install(TARGETS
   server.out
