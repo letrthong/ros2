@@ -5,5 +5,7 @@ thonglt@thonglt-virtual-machine:~/ros2_galactic/src$ git clone https://github.co
 thonglt@thonglt-virtual-machine:~/ros2_galactic/src$ cd ..
 thonglt@thonglt-virtual-machine:~/ros2_galactic$ colcon list | grep "thong"
 
-colcon build   --packages-select  --allow-overriding   thong_ipc
- 
+colcon build   --symlink-install --packages-select   thong_ipc
+colcon build   --symlink-install --packages-select  --allow-overriding   thong_ipc
+
+colcon clean --packages-select   thong_ipc
