@@ -24,7 +24,7 @@ void thread_function()
         node->create_client<example_interfaces::srv::AddTwoInts>("add_two_ints");
 
     auto request = std::make_shared<example_interfaces::srv::AddTwoInts::Request>();
-    request->a = atoll"5");
+    request->a = atoll("5");
     request->b atoll("4");
 
     while (!client->wait_for_service(1s)) {
