@@ -16,6 +16,7 @@ using std::placeholders::_1;
 using namespace std::chrono_literals;
  
 #include <unistd.h>
+void getSum(int i);
 
 void thread_function()
 { 
