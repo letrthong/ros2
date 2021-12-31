@@ -45,8 +45,6 @@ void thread_function()
     else {
         RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service add_two_ints");
     }
-
-    rclcpp::shutdown();
 }
 
 
