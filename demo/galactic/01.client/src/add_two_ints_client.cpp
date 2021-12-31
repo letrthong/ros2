@@ -14,11 +14,20 @@ using std::placeholders::_1;
 #include <memory>
 
 using namespace std::chrono_literals;
-
+ 
+#include <unistd.h>
 
 void thread_function()
 { 
- 
+    for (int i = 0; < 100; i++) {
+        getSum();
+        sleep(5);
+    }
+  
+}
+
+
+void getSum() {
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("add_two_ints_client");
     rclcpp::Client<example_interfaces::srv::AddTwoInts>::SharedPtr client =
         node->create_client<example_interfaces::srv::AddTwoInts>("add_two_ints");
@@ -46,6 +55,7 @@ void thread_function()
         RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Failed to call service add_two_ints");
     }
 }
+
 
 
 
