@@ -7,11 +7,11 @@
 
 ---------------------BUILD---------------------------------------
    ~/ros2_galactic$ 
-	colcon build   --symlink-install --packages-select   thong_ipc
-	colcon build   --symlink-install --packages-select  --allow-overriding   thong_ipc
+	colcon build   --symlink-install --packages-select   thong_ipc_client
+	colcon build   --symlink-install --packages-select  --allow-overriding   thong_ipc_client
 
-	colcon clean --packages-select   thong_ipc
+	#colcon clean build --packages-select   thong_ipc
 
 ---------------------TEST---------------------------------------
 	. ~/ros2_galactic/install/local_setup.bash
-	ros2 run  thong_ipc client.out
+	ros2 run  thong_ipc_client client.out
