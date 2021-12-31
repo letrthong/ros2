@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(example_interfaces REQUIRED)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -15,12 +16,12 @@ find_package(rclcpp REQUIRED)
 
 cmake_minimum_required(VERSION 3.8)
 
-add_executable(publisher.out src/publisher.cpp)
+add_executable(server.out src/server.cpp)
 
-ament_target_dependencies(publisher.out rclcpp std_msgs) 
+ament_target_dependencies(server.out rclcpp std_msgs example_interfaces) 
 
 install(TARGETS
-  publisher.out
+  server.out
   DESTINATION lib/${PROJECT_NAME})
 
 
