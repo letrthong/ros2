@@ -25,7 +25,7 @@ void thread_function()
 
     auto request = std::make_shared<example_interfaces::srv::AddTwoInts::Request>();
     request->a = atoll("5");
-    request->b atoll("4");
+    request->b = atoll("4");
 
     while (!client->wait_for_service(1s)) {
         if (!rclcpp::ok()) {
