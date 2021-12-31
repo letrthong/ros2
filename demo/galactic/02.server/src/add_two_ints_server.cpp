@@ -7,6 +7,7 @@
 #include "std_msgs/msg/string.hpp"
 
 using namespace std::chrono_literals;
+//https://docs.ros.org/en/foxy/Tutorials/Writing-A-Simple-Cpp-Publisher-And-Subscriber.html#write-the-subscriber-node
 
 /* This example creates a subclass of Node and uses std::bind() to register a
 * member function as a callback from the timer. */
