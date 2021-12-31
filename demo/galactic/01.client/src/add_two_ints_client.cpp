@@ -19,7 +19,7 @@ using namespace std::chrono_literals;
 
 void thread_function()
 { 
-    for (int i = 0; < 100; i++) {
+    for (int i = 0; i < 100; i++) {
         getSum();
         sleep(5);
     }
