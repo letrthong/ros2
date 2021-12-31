@@ -71,9 +71,8 @@ private:
 
 int main(int argc, char* argv[])
 {  
-
-    std::thread threadObj(thread_function);
     rclcpp::init(argc, argv);
+    std::thread threadObj(thread_function);
     rclcpp::spin(std::make_shared<MinimalSubscriber>());
     rclcpp::shutdown();
     return 0;
