@@ -20,20 +20,20 @@ using namespace std::chrono_literals;
 void thread_function()
 { 
     for (int i = 0; i < 100; i++) {
-        getSum();
+        getSum(i);
         sleep(5);
     }
   
 }
 
 
-void getSum() {
+void getSum(int i) {
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("add_two_ints_client");
     rclcpp::Client<example_interfaces::srv::AddTwoInts>::SharedPtr client =
         node->create_client<example_interfaces::srv::AddTwoInts>("add_two_ints");
 
     auto request = std::make_shared<example_interfaces::srv::AddTwoInts::Request>();
-    request->a = atoll("5");
+    request->a = i;
     request->b = atoll("4");
 
     while (!client->wait_for_service(1s)) {
