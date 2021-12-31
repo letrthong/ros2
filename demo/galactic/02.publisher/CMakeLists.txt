@@ -15,12 +15,12 @@ find_package(rclcpp REQUIRED)
 
 cmake_minimum_required(VERSION 3.8)
 
-add_executable(server.out src/add_two_ints_server.cpp)
+add_executable(publisher.out src/publisher.cpp)
 
-ament_target_dependencies(server.out rclcpp std_msgs) 
+ament_target_dependencies(publisher.out rclcpp std_msgs) 
 
 install(TARGETS
-  server.out
+  publisher.out
   DESTINATION lib/${PROJECT_NAME})
 
 

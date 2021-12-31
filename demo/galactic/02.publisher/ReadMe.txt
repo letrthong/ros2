@@ -16,4 +16,4 @@
 
 ---------------------TEST---------------------------------------
 	. ~/ros2_galactic/install/local_setup.bash
-	ros2 run  thong_ipc server.out
+	ros2 run  thong_ipc publisher.out
