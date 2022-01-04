@@ -48,6 +48,7 @@ private:
 
     void timer_callback1()
     {  
+        RCLCPP_INFO(this->get_logger(), "timer_callback1");
         Foo foo;
         foo.type = count_;
         foo.data = count_;
