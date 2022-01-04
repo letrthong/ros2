@@ -1,5 +1,6 @@
 #include "TestSubscriber.h"
 #include "NodeDef.h"
+using std::placeholders::_1;
 
 TestSubscriber::TestSubscriber() : Node(NODE_NAME_TEST) {
 	subscription_ = this->create_subscription<std_msgs::msg::String>(
