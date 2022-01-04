@@ -31,7 +31,7 @@ public:
             500ms, std::bind(&MinimalPublisher::timer_callback, this));
 
 
-        publisher1_= this->create_publisher< Foo>("status", 10);
+        publisher1_= this->create_publisher< std_msgs::msg::String>("status", 10);
         timer1_ = this->create_wall_timer(
             5000ms, std::bind(&MinimalPublisher::timer_callback1, this));
     }
