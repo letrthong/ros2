@@ -16,13 +16,7 @@ using std::placeholders::_1;
 using namespace std::chrono_literals;
  
 #include <unistd.h>
-
-typedef struct {
-    int type;
-    int data;
-} Foo;
-
-
+ 
 void getSum(int i);
 
 void thread_function()
@@ -76,8 +70,7 @@ public:
         subscription_ = this->create_subscription<std_msgs::msg::String>(
             "topic", 10, std::bind(&MinimalSubscriber::topic_callback, this, _1));
 
-        subscription1_ = this->create_subscription<Foo>(
-            "status", 10, std::bind(&MinimalSubscriber::topic_callback1, this, _1));
+       
     }
 
 private:
@@ -85,16 +78,11 @@ private:
     {
         RCLCPP_INFO(this->get_logger(), "ThongLT I heard: '%s'", msg->data.c_str());
     }
+ 
 
-
-    void topic_callback1(Foo foo) const
-    {
-        RCLCPP_INFO(this->get_logger(), "ThongLT I heard: foo type='%d'", foo.type);
-    }
-
+  
     rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
-
-    rclcpp::Subscription<Foo>::SharedPtr subscription1_;
+ 
 };
 
 int main(int argc, char* argv[])

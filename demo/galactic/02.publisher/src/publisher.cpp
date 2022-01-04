@@ -11,14 +11,7 @@ using namespace std::chrono_literals;
 
 /* This example creates a subclass of Node and uses std::bind() to register a
 * member function as a callback from the timer. */
-
-
-
-typedef struct {
-    int type;
-    int data;
-} Foo;
-
+ 
 //http://wiki.ros.org/std_msgs
 class MinimalPublisher : public rclcpp::Node
 {
@@ -30,10 +23,7 @@ public:
         timer_ = this->create_wall_timer(
             500ms, std::bind(&MinimalPublisher::timer_callback, this));
 
-
-        publisher1_= this->create_publisher< std_msgs::msg::String>("status", 10);
-        timer1_ = this->create_wall_timer(
-            5000ms, std::bind(&MinimalPublisher::timer_callback1, this));
+ 
     }
 
 private:
@@ -46,21 +36,13 @@ private:
     }
 
 
-    void timer_callback1()
-    {  
-        RCLCPP_INFO(this->get_logger(), "timer_callback1");
-        Foo foo;
-        foo.type = count_;
-        foo.data = count_ +1;
-        publisher1_->publish(foo);
-    }
+  
 
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
 
 
-    rclcpp::TimerBase::SharedPtr timer1_;
-    rclcpp::Publisher<Foo>::SharedPtr publisher1_;
+    
 
     size_t count_;
 };
