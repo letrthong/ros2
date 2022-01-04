@@ -51,7 +51,7 @@ private:
         RCLCPP_INFO(this->get_logger(), "timer_callback1");
         Foo foo;
         foo.type = count_;
-        foo.data = count_;
+        foo.data = count_ +1;
         publisher1_->publish(foo);
     }
 
