@@ -3,7 +3,8 @@
 #include <memory>
  
 #include "rclcpp/rclcpp.hpp"
- 
+#include "std_msgs/msg/string.hpp"
+
 using namespace std::chrono_literals;
 class TestSubscriber : public rclcpp::Node {
 public:
