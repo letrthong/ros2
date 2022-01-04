@@ -17,12 +17,12 @@ find_package(example_interfaces REQUIRED)
 
 cmake_minimum_required(VERSION 3.8)
 
-add_executable(client.out src/add_two_ints_client.cpp)
+add_executable(node_client example/main.cpp)
 
-ament_target_dependencies(client.out rclcpp std_msgs example_interfaces) 
+ament_target_dependencies(node_client rclcpp std_msgs example_interfaces) 
 
 install(TARGETS
-  client.out
+  node_client
   DESTINATION lib/${PROJECT_NAME})
 
 
