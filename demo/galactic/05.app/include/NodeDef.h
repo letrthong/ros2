@@ -1,4 +1,6 @@
-#define  TOPIC_INS_SBG_STATUS  "sbg/status"
+#define  TOPIC_NAME_TEST  "topic"
+
+#define NODE_NAME_TEST "minimal_subscriber"
 
 
 typedef struct _AdLogNavInfoData {
