@@ -16,7 +16,7 @@ using namespace std::chrono_literals;
 
 typedef struct {
     int type;
-    int data
+    int data;
 } Foo;
 
 
