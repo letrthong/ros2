@@ -1,4 +1,5 @@
 # Build
+colcon build   --symlink-install --packages-select   node_ipc_client
 colcon build   --symlink-install --packages-select  --allow-overriding   node_ipc_client
 
 # Run
