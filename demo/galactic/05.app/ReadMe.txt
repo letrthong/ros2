@@ -4,4 +4,4 @@ colcon build   --symlink-install --packages-select  --allow-overriding   node_ip
 
 # Run
 . ~/ros2_galactic/install/local_setup.bash
-ros2 run  thong_ipc_action node_client
+ros2 run  node_ipc_client node_client
