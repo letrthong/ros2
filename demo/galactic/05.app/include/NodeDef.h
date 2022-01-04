@@ -1,6 +1,6 @@
-#define  TOPIC_NAME_TEST  "topic"
+#define  TOPIC_NAME_TEST		"topic"
 
-#define NODE_NAME_TEST "minimal_subscriber"
+#define NODE_NAME_TEST			"minimal_subscriber"
 
 
 typedef struct _AdLogNavInfoData {
