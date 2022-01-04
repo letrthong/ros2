@@ -19,7 +19,7 @@ typedef struct {
     int data;
 } Foo;
 
-
+//http://wiki.ros.org/std_msgs
 class MinimalPublisher : public rclcpp::Node
 {
 public:
