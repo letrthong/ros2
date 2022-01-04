@@ -65,7 +65,7 @@ private:
 
 
     rclcpp::TimerBase::SharedPtr timer1_;
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher1_;
+    rclcpp::Publisher<Foo>::SharedPtr publisher1_;
 
     size_t count_;
 };
