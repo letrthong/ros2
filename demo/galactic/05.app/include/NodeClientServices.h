@@ -4,4 +4,4 @@ public:
 	int getNavInfo();
 private:
 
-}
+};
