@@ -1,7 +1,7 @@
 
-class NodeClientAction() {
+class NodeClientAction {
 public:
-	int getNavInfo();
+	void sendRequest();
 
 private:
 
