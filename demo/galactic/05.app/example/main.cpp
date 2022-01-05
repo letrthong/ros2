@@ -7,18 +7,33 @@ using namespace std;
 #include "rclcpp/rclcpp.hpp"
 #include "TestSubscriber.h"
 #include "NodeClientServices.h"
+#include "NodeClientAction.h"
 
-
+void helper() {
+	cout << "index= 0 -> getNavInfo" << endl;
+	cout << "index= 1 -> sendRequest" << endl;
+}
 void start_cli()
 {
+	cout << "start_cli" <<endl;
 	std::string index = "";
 	NodeClientServices nodeClientServices;
+	NodeClientAction   nodeClientAction;
 	while(true) {
 		sleep(1); 
 		cout << "\nEnter index= ?";
 		cin >> index;
 		cout << "\nEnter index= "<< index <<endl;
-		nodeClientServices.getNavInfo();
+
+		if (index == "0") {
+			nodeClientServices.getNavInfo();
+		}
+		else if (index == "1") {
+			nodeClientAction.sendRequest();
+		}
+		else {
+			helper()
+		}
 	}
 }
 

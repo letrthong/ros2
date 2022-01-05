@@ -19,7 +19,8 @@ find_package(example_interfaces REQUIRED)
 
 cmake_minimum_required(VERSION 3.8)
 
-add_executable(node_client example/main.cpp src/TestSubscriber.cpp src/NodeClientServices.cpp)
+add_executable(node_client example/main.cpp src/TestSubscriber.cpp 
+			src/NodeClientServices.cpp  src/NodeClientAction.cpp)
 
 ament_target_dependencies(node_client rclcpp std_msgs example_interfaces) 
 
