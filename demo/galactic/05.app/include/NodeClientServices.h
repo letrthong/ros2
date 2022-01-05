@@ -1,5 +1,5 @@
 
-class NodeClientServices() {
+class NodeClientServices {
 public:
 	int getNavInfo();
 private:
