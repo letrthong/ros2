@@ -10,6 +10,7 @@ using namespace std;
 #include "NodeClientAction.h"
 
 void helper() {
+	cout << "---------Helper------------" << endl;
 	cout << "index= 0 -> getNavInfo" << endl;
 	cout << "index= 1 -> sendRequest" << endl;
 }
@@ -23,7 +24,7 @@ void start_cli()
 		sleep(1); 
 		cout << "\nEnter index= ?";
 		cin >> index;
-		cout << "\nEnter index= "<< index <<endl;
+		cout << "Enter index= "<< index <<endl;
 
 		if (index == "0") {
 			nodeClientServices.getNavInfo();
