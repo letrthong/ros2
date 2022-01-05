@@ -19,7 +19,7 @@ int NodeClientServices::getNavInfo() {
     while (!client->wait_for_service(1s)) {
         if (!rclcpp::ok()) {
             RCLCPP_ERROR(rclcpp::get_logger("rclcpp"), "Interrupted while waiting for the service. Exiting.");
-            return;
+            return 1;
         }
         RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "service not available, waiting again...");
     }
