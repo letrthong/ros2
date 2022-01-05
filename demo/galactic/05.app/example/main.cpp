@@ -12,7 +12,7 @@ using namespace std;
 void start_cli()
 {
 	std::string index = "";
-	white(true) {
+	while(true) {
 		sleep(1);""
 		count << "\nEnter index= ?";
 		cin >> index;
