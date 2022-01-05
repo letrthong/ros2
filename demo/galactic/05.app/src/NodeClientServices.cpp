@@ -1,5 +1,6 @@
 #include "NodeClientServices.h"
-
+#include <iostream>
+using namespace std;
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 using std::placeholders::_1;
@@ -8,6 +9,7 @@ using std::placeholders::_1;
 using namespace std::chrono_literals;
 
 int NodeClientServices::getNavInfo() {
+    cout << "NodeClientServices::getNavInfo()" << endl;
     std::shared_ptr<rclcpp::Node> node = rclcpp::Node::make_shared("add_two_ints_client");
     rclcpp::Client<example_interfaces::srv::AddTwoInts>::SharedPtr client =
         node->create_client<example_interfaces::srv::AddTwoInts>("add_two_ints");
