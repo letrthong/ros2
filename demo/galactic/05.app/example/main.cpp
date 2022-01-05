@@ -32,7 +32,7 @@ void start_cli()
 			nodeClientAction.sendRequest();
 		}
 		else {
-			helper()
+			helper();
 		}
 	}
 }
