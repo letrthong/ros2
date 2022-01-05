@@ -6,17 +6,19 @@ using namespace std;
 
 #include "rclcpp/rclcpp.hpp"
 #include "TestSubscriber.h"
-
+#include "NodeClientServices.h"
 
 
 void start_cli()
 {
 	std::string index = "";
+	NodeClientServices nodeClientServices;
 	while(true) {
 		sleep(1); 
 		cout << "\nEnter index= ?";
 		cin >> index;
 		cout << "\nEnter index= "<< index <<endl;
+		nodeClientServices.getNavInfo();
 	}
 }
 
