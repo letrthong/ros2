@@ -14,9 +14,9 @@ void start_cli()
 	std::string index = "";
 	while(true) {
 		sleep(1); 
-		count << "\nEnter index= ?";
+		cout << "\nEnter index= ?";
 		cin >> index;
-		count << "\nEnter index= "<< index <<endl;
+		cout << "\nEnter index= "<< index <<endl;
 	}
 }
 
