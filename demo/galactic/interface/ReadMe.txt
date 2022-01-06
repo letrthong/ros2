@@ -23,3 +23,8 @@ https://github.com/ros2/example_interfaces
 	. ~/ros2_galactic/install/local_setup.bash
 	. install/setup.bash
 	ros2 interface show thong_interfaces/msg/MyNum
+----------------------RESULT----------------------------------
+thonglt@thonglt-virtual-machine:~/ros2_galactic$ . install/setup.bash
+thonglt@thonglt-virtual-machine:~/ros2_galactic$ ros2 interface list | grep "thong"
+    thong_interfaces/msg/MyNum
+    thong_interfaces/srv/AddThreeInts
