@@ -21,4 +21,5 @@ https://github.com/ros2/example_interfaces
 
 ---------------------TEST---------------------------------------
 	. ~/ros2_galactic/install/local_setup.bash
+	. install/setup.bash
 	ros2 interface show thong_interfaces/msg/MyNum
