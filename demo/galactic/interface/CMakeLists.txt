@@ -14,7 +14,5 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/AddThreeInts.srv"
  )
 
- install( DESTINATION share/${PROJECT_NAME})
-
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
