@@ -3,8 +3,11 @@ https://docs.ros.org/en/foxy/Tutorials/Custom-ROS2-Interfaces.html
 https://github.com/ros2/example_interfaces
 
 
+cmake
 
-
+find_package(rclcpp RQEUIRED)
+find_package(std_msgs RQEUIRED)
+find_package(std_srvs RQEUIRED)
 --------------------CODE-----------------------------------------
 	~/ros2_galactic$ 
 	~/ros2_galactic$ cd src/
