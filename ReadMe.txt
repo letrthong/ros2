@@ -23,8 +23,8 @@ Repository
  
  galactic
   url: https://github.com/ros2/rclcpp.git
-      branh: galactic
+      branch: galactic
       
  rolling
   url: https://github.com/ros2/rclcpp.git
-      brank: master
+      branch: master
