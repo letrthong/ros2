@@ -34,16 +34,6 @@ add_executable(example_action_client src/example_action_client.c)
 ament_target_dependencies(example_action_client rcl rcl_action rclc example_interfaces)
 
 install(TARGETS
-  example_executor
-  example_executor_convenience
-  example_executor_trigger
-  example_lifecycle_node
-  example_service_node
-  example_client_node
-  example_parameter_server
-  example_sub_context
-  example_pingpong
-  example_action_server
   example_action_client
   DESTINATION lib/${PROJECT_NAME}
 )
