@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(rclc_examples)
+project(in_c)
 
 #################################################
 # compiler settings
@@ -19,13 +19,13 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 find_package(ament_cmake_ros REQUIRED)
 find_package(rcl REQUIRED)
-find_package(rcl_lifecycle REQUIRED)
+# find_package(rcl_lifecycle REQUIRED)
 find_package(rclc REQUIRED)
 find_package(rclc_lifecycle REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(lifecycle_msgs REQUIRED)
 find_package(example_interfaces REQUIRED)
-find_package(rclc_parameter REQUIRED)
+# find_package(rclc_parameter REQUIRED)
 find_package(Threads REQUIRED)
 
 include_directories(include)
