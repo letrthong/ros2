@@ -9,8 +9,28 @@ colcon build   --symlink-install --packages-select domain_coordinator
 colcon build   --symlink-install --packages-select ament_cmake_ros
 
 
+https://github.com/ros2/rclc
 
 https://github.com/ros2/rclc.git
 
-https://github.com/ros2/rclc
 
+
+colcon build   --symlink-install --packages-select  rclc
+colcon build   --symlink-install --packages-select rclc_parameter 
+
+https://github.com/osrf/osrf_testing_tools_cpp
+colcon build   --symlink-install --packages-select osrf_testing_tools_cpp
+sudo ldconfig
+
+
+https://github.com/ros2/rcl_interfaces.git
+colcon build   --symlink-install --packages-select  rcl_interfaces
+colcon build   --symlink-install --packages-select builtin_interfaces
+colcon build   --symlink-install --packages-select action_msgs
+colcon build   --symlink-install --packages-select  test_msgs
+
+
+https://github.com/ros2/test_interface_files
+colcon build   --symlink-install --packages-select test_interface_files 
+
+ 
